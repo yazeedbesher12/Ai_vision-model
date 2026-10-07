@@ -1,0 +1,6 @@
+{
+    "metal": 0,
+    "other": 1,
+    "paper": 2,
+    "plastic": 3
+}

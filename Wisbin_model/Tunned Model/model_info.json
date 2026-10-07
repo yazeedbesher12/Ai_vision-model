@@ -1,0 +1,88 @@
+{
+  "balanced_sampler": false,
+  "weight_power": 0.5,
+  "unfreeze": 7,
+  "seed": 42,
+  "label_smoothing": 0.05,
+  "init_weights": "ecovision_mobilenetv3_ST.pth",
+  "bg_fill": 127,
+  "classes": [
+    "metal",
+    "other",
+    "paper",
+    "plastic"
+  ],
+  "counts": {
+    "metal": 128,
+    "other": 213,
+    "paper": 220,
+    "plastic": 240
+  },
+  "val_accuracy": 0.9083333333333333,
+  "val_macro_f1": 0.9124940772328832,
+  "val_per_class": {
+    "metal": {
+      "precision": 0.9047619047619048,
+      "recall": 1.0,
+      "f1": 0.9500000000000001
+    },
+    "other": {
+      "precision": 0.9032258064516129,
+      "recall": 0.875,
+      "f1": 0.8888888888888888
+    },
+    "paper": {
+      "precision": 0.9117647058823529,
+      "recall": 0.9393939393939394,
+      "f1": 0.9253731343283583
+    },
+    "plastic": {
+      "precision": 0.9117647058823529,
+      "recall": 0.8611111111111112,
+      "f1": 0.8857142857142858
+    }
+  },
+  "val_confusion": [
+    [
+      19,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      28,
+      0,
+      3
+    ],
+    [
+      1,
+      1,
+      31,
+      0
+    ],
+    [
+      0,
+      2,
+      3,
+      31
+    ]
+  ],
+  "test_accuracy": null,
+  "test_macro_f1": null,
+  "input": {
+    "name": "input",
+    "shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "range": "0-255 raw uint8 values, RGB, planar (NCHW)",
+    "normalization": "baked into the graph, do NOT pass mean/scale to MO"
+  },
+  "output": {
+    "name": "logits",
+    "note": "raw logits, apply softmax on host"
+  }
+}
